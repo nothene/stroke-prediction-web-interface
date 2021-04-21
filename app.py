@@ -17,6 +17,14 @@ model = pickle.load(open('gradient.pkl', 'rb'))
 def home():
     return render_template('index.html')
 
+@app.route('/table')
+def table():
+    return render_template('table.htm')
+
+@app.route('/pic')
+def pic():
+    return render_template('pic.html')
+
 @app.route('/predict', methods=['POST'])
 def predict():
  
