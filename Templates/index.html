@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>
+            Striked by stroke test
+        </title>
+    </head>
+    <body>
+        <div>Insert data to be predicted:</div>
+        <form action="{{ url_for('predict')}}"method="post">
+            <!-- <input type="text" name="gender" placeholder="gender" required="required" /> -->
+            <div>Age:</div>
+            <input type="number" name="age" placeholder="age" required="required" />
+            <div>Hypertension:</div>
+            <select name="hypertension" required="required">
+                <option value=1>Yes</option>
+                <option value=0>No</option>
+            </select>
+            <div>Heart disease:</div>
+            <select name="heart_disease" required="required">
+                <option value=1>Yes</option>
+                <option value=0>No</option>
+            </select>
+            <!-- <input type="text" name="ever_married" placeholder="ever_married" required="required" /> -->
+            <!-- <input type="text" name="work_type" placeholder="work_type" required="required" /> -->
+            <div>Work type:</div>
+            <select name="work_type" required="required">
+                <option value="Govt_job">Government</option>
+                <option value="Never_worked">Never Worked</option>
+                <option value="Private">Private</option>
+                <option value="Self-employed">Self-employed</option>
+            </select>
+            <div>Avg glucose level:</div>
+            <input type="number" name="avg_glucose_level" placeholder="avg_glucose_level" required="required" />
+            <!-- <input type="text" name="smoking_status" placeholder="smoking_status" required="required" /> -->
+            <div>Smoking:</div>
+            <select name="smking_status" required="required">
+                <option value="formerly smoked">Formerly smoked</option>
+                <option value="never smoked">Never smoked</option>
+                <option value="smokes">Smokes</option>
+            </select>
+            <div>bmi:</div>
+            <input type="number" name="bmi" placeholder="bmi" required="required" />
+            <button type="submit">Check stroke</button>
+        </form>
+
+        {{ prediction }}
+    </body>
+</html>
