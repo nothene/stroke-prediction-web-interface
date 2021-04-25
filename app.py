@@ -19,7 +19,7 @@ def home():
 
 @app.route('/table')
 def table():
-    return render_template('table.htm')
+    return render_template('table.html')
 
 @app.route('/pic')
 def pic():
